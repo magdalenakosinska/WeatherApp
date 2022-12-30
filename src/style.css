@@ -47,14 +47,14 @@ li::first-letter {
 }
 .temperature {
   color: rgb(33, 33, 33);
-  position: relative;
+  position: static;
   top: -10px;
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
 }
 .degrees {
-  position: relative;
+  position: static;
   top: 20px;
 }
 .days-week {
