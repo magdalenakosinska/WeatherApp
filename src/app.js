@@ -52,10 +52,11 @@ tempFahrenheit.addEventListener("click", changeToFahrenheit);
 let tempCelcius = document.querySelector("#temperature-celcius");
 
 function showTemperature(response) {
-  console.log(response.data.temperature);
+  let cityElement = document.querySelector("#city");
   let temperature = Math.round(response.data.temperature.current);
   let temperatureElement = document.querySelector("#temperature-today");
   temperatureElement.innerHTML = `${temperature}`;
+  cityElement.innerHTML = response.data.city;
 }
 
 let key = "td503e163f854a0f6995cof25bd51a89";
