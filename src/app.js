@@ -56,7 +56,7 @@ let query = "Lisbon";
 let apiURL = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${key}&units=metric`;
 
 function showTemperature(response) {
-  console.log(response.data);
+  console.log(response.temperature);
   let temperature = Math.round(response.temperature.current);
   let temperatureElement = document.querySelector("#temperature-today");
   temperatureElement.innerHTML = `${temperature}`;
