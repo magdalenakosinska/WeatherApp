@@ -74,9 +74,17 @@ function changeToFahrenheit(event) {
   temperatureElement.innerHTML = Math.round(tempFahrenheit);
 }
 
+function changeToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature-today");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
 let celciusTemperature = null;
 
 let tempFahrenheitLink = document.querySelector("#temperature-fahrenheit");
 tempFahrenheitLink.addEventListener("click", changeToFahrenheit);
 
 let tempCelsiusLink = document.querySelector("#temperature-celsius");
+
+tempCelsiusLink.addEventListener("click", changeToCelsius);
