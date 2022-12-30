@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <h1>Poznan, Poland</h1>
+        <ul>
+          <li id="currentTime">Wednesday 22:00</li>
+          <li>Partly cloudy</li>
+        </ul>
+
+        <div class="row">
+          <div class="col-6">
+            <span class="temperature" id="temperature-today">19</span
+            ><span class="degrees"
+              ><a href="#" id="temperature-celcius">°C</a></span
+            >
+            |
+            <span> <a href="#" id="temperature-fahrenheit">°F</a></span>
+          </div>
+
+          <div class="col-6">
+            <ul>
+              <li>Precipitation 0%</li>
+              <li>Humidity 77%</li>
+              <li>Wind 8km/h</li>
+            </ul>
+          </div>
+        </div>
+
+        <br />
+        <div class="days-week">
+          <div class="row text-center">
+            <div class="col-2 text-decoration-underline">Tomorrow</div>
+            <div class="col-2 text-decoration-underline">Thursday</div>
+            <div class="col-2 text-decoration-underline">Friday</div>
+            <div class="col-2 text-decoration-underline">Saturday</div>
+            <div class="col-2 text-decoration-underline">Sunday</div>
+            <div class="col-2 text-decoration-underline">Monday</div>
+          </div>
+
+          <div class="row text-center">
+            <div class="col-2">&#127784; 2°C</div>
+            <div class="col-2">&#127784; 2°C</div>
+            <div class="col-2">&#127784; 2°C</div>
+            <div class="col-2">&#127784; 2°C</div>
+            <div class="col-2">&#127784; 2°C</div>
+            <div class="col-2">&#127784; 2°C</div>
+          </div>
+        </div>
+        <br />
+        <br />
+
+        <div id="search-text"></div>
+
+        <form id="searchCityForm">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Type a city..."
+                class="form-control"
+                id="form-search"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary"
+                id="form-submit"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
