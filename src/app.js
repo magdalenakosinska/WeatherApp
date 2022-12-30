@@ -93,3 +93,5 @@ tempFahrenheitLink.addEventListener("click", changeToFahrenheit);
 let tempCelsiusLink = document.querySelector("#temperature-celsius");
 
 tempCelsiusLink.addEventListener("click", changeToCelsius);
+
+search(Oslo);
