@@ -58,11 +58,16 @@ function showTemperature(response) {
   let temperatureElement = document.querySelector("#temperature-today");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
   temperatureElement.innerHTML = `${temperature}`;
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = response.data.wind.speed;
+  iconElement.setAttribute(
+    "src",
+    "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+  );
 }
 
 let key = "td503e163f854a0f6995cof25bd51a89";
