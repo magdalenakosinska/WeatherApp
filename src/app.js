@@ -56,9 +56,13 @@ function showTemperature(response) {
   let descriptionElement = document.querySelector("#weather-description");
   let temperature = Math.round(response.data.temperature.current);
   let temperatureElement = document.querySelector("#temperature-today");
+  let humidityElement = querySelector("#humidity");
+  let windElement = querySelector("#wind");
   temperatureElement.innerHTML = `${temperature}`;
   cityElement.innerHTML = response.data.city;
-  descriptionElement = response.data.description;
+  descriptionElement.innerHTML = response.data.description;
+  humidityElement.innerHTML = response.data.temperature.humidity;
+  windElement.innerHTML = response.data.wind.speed;
 }
 
 let key = "td503e163f854a0f6995cof25bd51a89";

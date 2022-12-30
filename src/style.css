@@ -23,12 +23,15 @@ li {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  text-transform: capitalize;
+
   font-weight: 150;
   height: 19px;
   line-height: 19.2px;
   list-style: none;
   text-align: left;
+}
+li::first-letter {
+  text-transform: capitalize;
 }
 
 .weather-wrapper {
