@@ -51,14 +51,14 @@ img {
 }
 .temperature {
   color: rgb(33, 33, 33);
-  position: static;
+  position: relative;
   top: -10px;
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
 }
 .degrees {
-  position: static;
+  position: relative;
   top: -40px;
 }
 .days-week {
