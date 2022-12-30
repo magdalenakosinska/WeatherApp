@@ -60,7 +60,7 @@ function showTemperature(response) {
   let windElement = document.querySelector("#wind");
   temperatureElement.innerHTML = `${temperature}`;
   cityElement.innerHTML = response.data.city;
-  descriptionElement.innerHTML = response.data.description;
+  descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = response.data.wind.speed;
 }
