@@ -27,7 +27,9 @@ li {
   list-style: none;
   text-align: left;
 }
-
+small {
+  text-align: center;
+}
 .weather-wrapper {
   max-width: 600px;
   margin: 30px auto;
