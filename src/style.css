@@ -36,6 +36,7 @@ li::first-letter {
 img {
   position: relative;
   top: -30px;
+  left: 10px;
 }
 .weather-wrapper {
   max-width: 600px;
