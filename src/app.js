@@ -35,12 +35,12 @@ function handleSubmit(event) {
   let searchText = document.querySelector("#search-text");
   let cityInputElement = document.querySelector("#form-search");
   search(cityInputElement.value);
-  searchText.innerHTML = `Searching for ${cityValue.value}...`;
+  searchText.innerHTML = `Searching for ${cityInputElement.value}...`;
 }
 
 let searchCityForm = document.querySelector("#searchCityForm");
 
-searchCityForm.addEventListener("submit", addSearchText);
+searchCityForm.addEventListener("submit", handleSubmit);
 
 // changing C to K and vice versa
 
