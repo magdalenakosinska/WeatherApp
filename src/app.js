@@ -51,8 +51,8 @@ tempFahrenheit.addEventListener("click", changeToFahrenheit);
 
 let tempCelcius = document.querySelector("#temperature-celcius");
 
-let apiURL =
-  "https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=7059cb165caa3316bff682d263a01b1e";
+let key = "td503e163f854a0f6995cof25bd51a89";
+let apiURL = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${key}&units=metric`;
 
 function showTemperature(response) {
   console.log(response.data);
