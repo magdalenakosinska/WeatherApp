@@ -53,10 +53,12 @@ let tempCelcius = document.querySelector("#temperature-celcius");
 
 function showTemperature(response) {
   let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#weather-description");
   let temperature = Math.round(response.data.temperature.current);
   let temperatureElement = document.querySelector("#temperature-today");
   temperatureElement.innerHTML = `${temperature}`;
   cityElement.innerHTML = response.data.city;
+  descriptionElement = response.data.description;
 }
 
 let key = "td503e163f854a0f6995cof25bd51a89";
