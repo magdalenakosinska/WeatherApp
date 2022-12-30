@@ -33,6 +33,10 @@ li {
 li::first-letter {
   text-transform: capitalize;
 }
+img {
+  display: block;
+  margin: 0 auto;
+}
 
 .weather-wrapper {
   max-width: 600px;
