@@ -59,7 +59,7 @@ img {
 }
 .degrees {
   position: static;
-  top: 0px;
+  top: -20px;
 }
 .days-week {
   color: rgb(135, 135, 135);
