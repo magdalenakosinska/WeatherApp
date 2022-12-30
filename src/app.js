@@ -22,12 +22,19 @@ let currentTime = document.querySelector("#currentTime");
 
 currentTime.innerHTML = `${weekDays[day]} ${hours}:${minutes}`;
 
+function search(city) {
+  let key = "td503e163f854a0f6995cof25bd51a89";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}}&key=${key}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
 // adding "searching..." text
 
-function addSearchText(event) {
+function handleSubmit(event) {
   event.preventDefault();
   let searchText = document.querySelector("#search-text");
-  let cityValue = document.querySelector("#form-search");
+  let cityInputElement = document.querySelector("#form-search");
+  search(cityInputElement.value);
   searchText.innerHTML = `Searching for ${cityValue.value}...`;
 }
 
@@ -69,9 +76,3 @@ function showTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
 }
-
-let key = "td503e163f854a0f6995cof25bd51a89";
-let query = "Lisbon";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${query}}&key=${key}&units=metric`;
-
-axios.get(apiUrl).then(showTemperature);
