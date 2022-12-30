@@ -54,7 +54,7 @@ img {
   color: rgb(33, 33, 33);
   position: relative;
   top: -10px;
-  left: -30px;
+  left: -35px;
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
@@ -62,7 +62,7 @@ img {
 .degrees {
   position: relative;
   top: -40px;
-  left: -30px;
+  left: -35px;
 }
 .days-week {
   color: rgb(135, 135, 135);
