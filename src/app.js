@@ -55,10 +55,10 @@ let key = "td503e163f854a0f6995cof25bd51a89";
 let query = "Lisbon";
 let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${key}&units=metric`;
 
-function showTemperature(response) {
-  console.log(response.temperature);
-  let temperature = Math.round(response.temperature.current);
-  let temperatureElement = document.querySelector("#temperature-today");
-  temperatureElement.innerHTML = `${temperature}`;
-}
-axios.get(apiUrl).then(showTemperature);
+//function showTemperature(response) {
+console.log(response.temperature);
+let temperature = Math.round(response.temperature.current);
+let temperatureElement = document.querySelector("#temperature-today");
+temperatureElement.innerHTML = `${temperature}`;
+//}
+//axios.get(apiUrl).then(showTemperature);
