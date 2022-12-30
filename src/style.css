@@ -33,7 +33,6 @@ li {
 li::first-letter {
   text-transform: capitalize;
 }
-
 .weather-wrapper {
   max-width: 600px;
   margin: 30px auto;
@@ -49,14 +48,14 @@ li::first-letter {
 .temperature {
   color: rgb(33, 33, 33);
   position: relative;
-  top: -20px;
+  top: 0px;
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
 }
 .degrees {
   position: relative;
-  top: -50px;
+  top: 0px;
 }
 .days-week {
   color: rgb(135, 135, 135);
