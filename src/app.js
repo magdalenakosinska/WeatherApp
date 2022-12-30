@@ -80,7 +80,7 @@ function changeToCelsius(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-let celciusTemperature = null;
+let celsiusTemperature = null;
 
 let tempFahrenheitLink = document.querySelector("#temperature-fahrenheit");
 tempFahrenheitLink.addEventListener("click", changeToFahrenheit);
