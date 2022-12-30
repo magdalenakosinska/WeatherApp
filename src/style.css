@@ -35,7 +35,6 @@ li::first-letter {
 }
 img {
   display: block;
-  margin: 0 auto;
 }
 
 .weather-wrapper {
