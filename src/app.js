@@ -28,7 +28,7 @@ function search(city) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-// adding "searching..." text
+// adding "searching..." text and search functionality
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -41,22 +41,6 @@ function handleSubmit(event) {
 let searchCityForm = document.querySelector("#searchCityForm");
 
 searchCityForm.addEventListener("submit", handleSubmit);
-
-// changing C to K and vice versa
-
-// (X * 9) / 5 + 32);
-
-function changeToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureToday = document.querySelector("#temperature-today");
-  temperatureToday.innerHTML = (temperatureToday * 9) / 5 + 32;
-  console.log(typeof temperatureToday);
-}
-
-let tempFahrenheit = document.querySelector("#temperature-fahrenheit");
-tempFahrenheit.addEventListener("click", changeToFahrenheit);
-
-let tempCelcius = document.querySelector("#temperature-celcius");
 
 function showTemperature(response) {
   let cityElement = document.querySelector("#city");
@@ -76,3 +60,19 @@ function showTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
 }
+
+// changing C to K and vice versa
+
+// (X * 9) / 5 + 32);
+
+function changeToFahrenheit(event) {
+  event.preventDefault();
+  let tempFahrenheit = (14 * 9) / 5 + 32;
+  let temperatureElement = querySelector("#temperature-today");
+  temperatureElement.innerHTML = tempFahrenheit;
+}
+
+let tempFahrenheitLink = document.querySelector("#temperature-fahrenheit");
+tempFahrenheitLink.addEventListener("click", changeToFahrenheit);
+
+let tempCelciusLink = document.querySelector("#temperature-celcius");
