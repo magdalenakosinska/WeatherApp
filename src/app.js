@@ -66,7 +66,7 @@ function showTemperature(response) {
   windElement.innerHTML = response.data.wind.speed;
   iconElement.setAttribute(
     "src",
-    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png`
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
 }
 
