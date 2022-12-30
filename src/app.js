@@ -67,6 +67,8 @@ function showTemperature(response) {
 
 // (X * 9) / 5 + 32);
 
+search("Oslo");
+
 function changeToFahrenheit(event) {
   event.preventDefault();
   let tempFahrenheit = (celsiusTemperature * 9) / 5 + 32;
@@ -93,5 +95,3 @@ tempFahrenheitLink.addEventListener("click", changeToFahrenheit);
 let tempCelsiusLink = document.querySelector("#temperature-celsius");
 
 tempCelsiusLink.addEventListener("click", changeToCelsius);
-
-search(Oslo);
