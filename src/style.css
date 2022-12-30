@@ -35,7 +35,7 @@ li::first-letter {
 }
 img {
   position: relative;
-  top: -30px;
+  top: -20px;
 }
 .weather-wrapper {
   max-width: 600px;
@@ -59,7 +59,7 @@ img {
 }
 .degrees {
   position: static;
-  top: 20px;
+  top: 0px;
 }
 .days-week {
   color: rgb(135, 135, 135);
