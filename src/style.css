@@ -21,6 +21,9 @@ ul {
 li {
   color: rgb(135, 135, 135);
   font-size: 16px;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
   font-weight: 150;
   height: 19px;
   line-height: 19.2px;
