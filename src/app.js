@@ -53,7 +53,7 @@ let tempCelcius = document.querySelector("#temperature-celcius");
 
 let key = "td503e163f854a0f6995cof25bd51a89";
 let query = "Lisbon";
-let apiURL = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${key}&units=metric`;
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${key}&units=metric`;
 
 function showTemperature(response) {
   console.log(response.temperature);
@@ -61,4 +61,4 @@ function showTemperature(response) {
   let temperatureElement = document.querySelector("#temperature-today");
   temperatureElement.innerHTML = `${temperature}`;
 }
-axios.get(apiURL).then(showTemperature);
+axios.get(apiUrl).then(showTemperature);
