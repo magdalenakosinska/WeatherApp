@@ -69,7 +69,7 @@ function showTemperature(response) {
 
 function changeToFahrenheit(event) {
   event.preventDefault();
-  let tempFahrenheit = (celciusTemperature * 9) / 5 + 32;
+  let tempFahrenheit = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature-today");
   temperatureElement.innerHTML = Math.round(tempFahrenheit);
 }
