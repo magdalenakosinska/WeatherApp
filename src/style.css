@@ -27,6 +27,11 @@ li {
   list-style: none;
   text-align: left;
 }
+
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
 .weather-app {
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   border: 1px solid #dadde1;
