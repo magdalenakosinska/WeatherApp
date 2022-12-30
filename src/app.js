@@ -71,12 +71,17 @@ function changeToFahrenheit(event) {
   event.preventDefault();
   let tempFahrenheit = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature-today");
+  tempCelsiusLink.classList.remove("active");
+  tempFahrenheitLink.classList.add("active");
+
   temperatureElement.innerHTML = Math.round(tempFahrenheit);
 }
 
 function changeToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature-today");
+  tempCelsiusLink.classList.add("active");
+  tempFahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 

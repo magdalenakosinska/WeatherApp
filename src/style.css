@@ -72,3 +72,11 @@ img {
   text-align: center;
   font-size: 13px;
 }
+.active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+}
