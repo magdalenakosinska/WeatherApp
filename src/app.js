@@ -45,12 +45,14 @@ searchCityForm.addEventListener("submit", handleSubmit);
 function showTemperature(response) {
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#weather-description");
-  let temperature = Math.round(response.data.temperature.current);
   let temperatureElement = document.querySelector("#temperature-today");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let iconElement = document.querySelector("#icon");
-  temperatureElement.innerHTML = `${temperature}`;
+
+  celsiusTemperature = response.data.temperature.current;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = response.data.temperature.humidity;
@@ -67,12 +69,14 @@ function showTemperature(response) {
 
 function changeToFahrenheit(event) {
   event.preventDefault();
-  let tempFahrenheit = (14 * 9) / 5 + 32;
+  let tempFahrenheit = (celciusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature-today");
   temperatureElement.innerHTML = Math.round(tempFahrenheit);
 }
 
+let celciusTemperature = null;
+
 let tempFahrenheitLink = document.querySelector("#temperature-fahrenheit");
 tempFahrenheitLink.addEventListener("click", changeToFahrenheit);
 
-let tempCelciusLink = document.querySelector("#temperature-celcius");
+let tempCelsiusLink = document.querySelector("#temperature-celsius");
