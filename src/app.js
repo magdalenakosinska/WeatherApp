@@ -63,7 +63,7 @@ function showTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let iconElement = document.querySelector("#icon");
-
+  displayForecast(response.data.city);
   celsiusTemperature = response.data.temperature.current;
 
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
@@ -148,4 +148,3 @@ tempFahrenheitLink.addEventListener("click", changeToFahrenheit);
 let tempCelsiusLink = document.querySelector("#temperature-celsius");
 
 tempCelsiusLink.addEventListener("click", changeToCelsius);
-displayForecast(Oslo);
