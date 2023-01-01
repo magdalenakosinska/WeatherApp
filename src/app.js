@@ -103,7 +103,7 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastHTML = forecastElement.innerHTML = forecastHTML;
 }
-
+displayForecast();
 // changing C to K and vice versa
 
 // (X * 9) / 5 + 32);
