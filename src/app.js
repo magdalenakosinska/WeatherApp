@@ -82,17 +82,17 @@ function displayForecast(response) {
       `
       <div class="col-2">
         <div class="weather-forecast-date">
-          ${forecastDay[3]}
+          ${forecastDay.time}
           <div class="weather-forecast-icon">
             <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay[0].icon}.png"
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png"
               alt="weather icon"
               width="42"
             />
           </div>
           <div class="weather-forecast-temperature">
-            <span class="weather-forecast-temperature-maximum">${forecastDay[1].maximum}°</span>
-            <span class="weather-forecast-temperature-minimum">${forecastDay[1].minimum}°</span>
+            <span class="weather-forecast-temperature-maximum">${forecastDay.temperature.maximum}°</span>
+            <span class="weather-forecast-temperature-minimum">${forecastDay.temperature.minimum}°</span>
           </div>
         </div>
       </div>
