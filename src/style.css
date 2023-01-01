@@ -90,12 +90,12 @@ img {
 .weather-forecast-date {
   font-size: 16px;
   color: rgb(33, 33, 33);
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .weather-forecast-temperature {
   font-size: 13px;
 }
 
 .weather-forecast-temperature-minimum {
-  opacity: 0.5;
+  opacity: 0.6;
 }
