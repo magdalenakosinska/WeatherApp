@@ -36,11 +36,11 @@ function search(city) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-//function showForecast(city) {
-//let key = "td503e163f854a0f6995cof25bd51a89";
-//let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${key}&units=metric`;
-// axios.get(apiUrl).then(displayForecast);
-//}
+function showForecast(city) {
+  let key = "td503e163f854a0f6995cof25bd51a89";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${key}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 // adding "searching..." text and search functionality
 
