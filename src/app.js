@@ -63,11 +63,50 @@ function showTemperature(response) {
   );
 }
 
+search("Oslo");
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+
+  let days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">
+          Tomorrow
+          <div class="weather-forecast-icon">
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+              alt="weather icon"
+              width="42"
+            />
+          </div>
+          <div class="weather-forecast-temperature">
+            <span class="weather-forecast-temperature-maximum">20°C</span>
+            <span class="weather-forecast-temperature-minimum">2°C</span>
+          </div>
+        </div>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastHTML = forecastElement.innerHTML = forecastHTML;
+}
+
 // changing C to K and vice versa
 
 // (X * 9) / 5 + 32);
-
-search("Oslo");
 
 function changeToFahrenheit(event) {
   event.preventDefault();
