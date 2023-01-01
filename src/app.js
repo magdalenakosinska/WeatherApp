@@ -28,6 +28,12 @@ function search(city) {
   axios.get(apiUrl).then(showTemperature);
 }
 
+function showForecast(city) {
+  let key = "td503e163f854a0f6995cof25bd51a89";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&${key}=td503e163f854a0f6995cof25bd51a89&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 // adding "searching..." text and search functionality
 
 function handleSubmit(event) {
@@ -65,35 +71,28 @@ function showTemperature(response) {
 
 search("Oslo");
 
-function displayForecast() {
+function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
 
-  let days = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  days.forEach(function (day) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `
       <div class="col-2">
         <div class="weather-forecast-date">
-          ${day}
+          ${forecastDay[3]}
           <div class="weather-forecast-icon">
             <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay[0].icon}.png"
               alt="weather icon"
               width="42"
             />
           </div>
           <div class="weather-forecast-temperature">
-            <span class="weather-forecast-temperature-maximum">20°</span>
-            <span class="weather-forecast-temperature-minimum">2°</span>
+            <span class="weather-forecast-temperature-maximum">${forecastDay[1].maximum}°</span>
+            <span class="weather-forecast-temperature-minimum">${forecastDay[1].minimum}°</span>
           </div>
         </div>
       </div>
@@ -103,7 +102,6 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastHTML = forecastElement.innerHTML = forecastHTML;
 }
-displayForecast();
 // changing C to K and vice versa
 
 // (X * 9) / 5 + 32);
