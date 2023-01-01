@@ -83,7 +83,7 @@ function displayForecast() {
       `
       <div class="col-2">
         <div class="weather-forecast-date">
-          Tomorrow
+          ${day}
           <div class="weather-forecast-icon">
             <img
               src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
@@ -92,8 +92,8 @@ function displayForecast() {
             />
           </div>
           <div class="weather-forecast-temperature">
-            <span class="weather-forecast-temperature-maximum">20°C</span>
-            <span class="weather-forecast-temperature-minimum">2°C</span>
+            <span class="weather-forecast-temperature-maximum">20°</span>
+            <span class="weather-forecast-temperature-minimum">2°</span>
           </div>
         </div>
       </div>
