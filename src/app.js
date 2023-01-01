@@ -25,7 +25,9 @@ currentTime.innerHTML = `${weekDays[day]} ${hours}:${minutes}`;
 function formatDay(date) {
   let date = new Date(timestamp * 1000);
   let day = getDay();
-  return day;
+
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
 }
 
 function search(city) {
@@ -146,3 +148,4 @@ tempFahrenheitLink.addEventListener("click", changeToFahrenheit);
 let tempCelsiusLink = document.querySelector("#temperature-celsius");
 
 tempCelsiusLink.addEventListener("click", changeToCelsius);
+displayForecast(Oslo);
