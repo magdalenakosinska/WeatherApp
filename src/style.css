@@ -33,11 +33,7 @@ li {
 li::first-letter {
   text-transform: capitalize;
 }
-img {
-  position: relative;
-  top: -30px;
-  left: -25px;
-}
+
 .weather-wrapper {
   max-width: 600px;
   margin: 30px auto;
@@ -64,9 +60,10 @@ img {
   top: -40px;
   left: -40px;
 }
-.days-week {
-  color: rgb(135, 135, 135);
-  font-weight: 150;
+.weather-app-icon {
+  position: relative;
+  top: -30px;
+  left: -25px;
 }
 .coded-by {
   text-align: center;
