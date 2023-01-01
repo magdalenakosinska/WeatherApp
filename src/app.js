@@ -30,7 +30,7 @@ function search(city) {
 
 function showForecast(city) {
   let key = "td503e163f854a0f6995cof25bd51a89";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&${key}=td503e163f854a0f6995cof25bd51a89&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${key}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
