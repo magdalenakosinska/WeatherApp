@@ -22,6 +22,12 @@ let currentTime = document.querySelector("#currentTime");
 
 currentTime.innerHTML = `${weekDays[day]} ${hours}:${minutes}`;
 
+function formatDay(date) {
+  let date = new Date(timestamp * 1000);
+  let day = getDay();
+  return day;
+}
+
 function search(city) {
   let key = "td503e163f854a0f6995cof25bd51a89";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}}&key=${key}&units=metric`;
@@ -83,7 +89,7 @@ function displayForecast(response) {
         `
       <div class="col-2">
         <div class="weather-forecast-date">
-          ${forecastDay.time}
+          ${formatDay(forecastDay.time)}
           <div class="weather-forecast-icon">
             <img
               src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
