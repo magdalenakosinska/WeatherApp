@@ -22,9 +22,9 @@ let currentTime = document.querySelector("#currentTime");
 
 currentTime.innerHTML = `${weekDays[day]} ${hours}:${minutes}`;
 
-function formatDay(date) {
+function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
-  let day = getDay();
+  let day = date.getDay();
 
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[day];
@@ -75,6 +75,7 @@ function showTemperature(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
+  showForecast(response.data.city);
 }
 
 search("Oslo");
