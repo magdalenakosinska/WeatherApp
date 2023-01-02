@@ -119,33 +119,3 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastHTML = forecastElement.innerHTML = forecastHTML;
 }
-// changing C to K and vice versa
-
-// (X * 9) / 5 + 32);
-
-function changeToFahrenheit(event) {
-  event.preventDefault();
-  let tempFahrenheit = (celsiusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#temperature-today");
-  tempCelsiusLink.classList.remove("active");
-  tempFahrenheitLink.classList.add("active");
-
-  temperatureElement.innerHTML = Math.round(tempFahrenheit);
-}
-
-function changeToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature-today");
-  tempCelsiusLink.classList.add("active");
-  tempFahrenheitLink.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
-let tempFahrenheitLink = document.querySelector("#temperature-fahrenheit");
-tempFahrenheitLink.addEventListener("click", changeToFahrenheit);
-
-let tempCelsiusLink = document.querySelector("#temperature-celsius");
-
-tempCelsiusLink.addEventListener("click", changeToCelsius);

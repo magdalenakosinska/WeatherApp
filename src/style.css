@@ -69,15 +69,6 @@ li::first-letter {
   text-align: center;
   font-size: 13px;
 }
-.active {
-  color: rgb(33, 33, 33);
-  cursor: default;
-  text-decoration: none;
-}
-
-.active:hover {
-  text-decoration: none;
-}
 
 .weather-forecast {
   margin-top: 20px;
